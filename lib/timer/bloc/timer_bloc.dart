@@ -20,6 +20,7 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
     on<TimerTicked>(_onTicked);
     on<TimerPaused>(_onPaused);
     on<TimerResumed>(_onResumed);
+    on<TimerReset>(_onReset);
   }
 
   @override
