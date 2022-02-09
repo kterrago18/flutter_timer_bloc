@@ -71,6 +71,8 @@ class Actions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<TimerBloc, TimerState>(
+      /// If [buildWhen] returns true, builder will be called with state and the widget will rebuild.
+      /// If [buildWhen] returns false, builder will not be called with state and no rebuild will occur.
       buildWhen: (prev, state) => prev.runtimeType != state.runtimeType,
       builder: (context, state) {
         return Row(
